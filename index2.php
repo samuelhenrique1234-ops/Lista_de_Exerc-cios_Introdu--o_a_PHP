@@ -17,7 +17,6 @@
  <?php
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
     if(isset($_POST['verificar_tabuada'])){
         $numero = $_POST['numero_tabuada'];
         for ($i = 1; $i <= 10; $i++) {
