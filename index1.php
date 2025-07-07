@@ -14,7 +14,7 @@
         <button type="submit" name="verificar_numero_par">Verificar</button>
     </form>
 
-    <?php/*abre o php*/
+    <?php
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -26,7 +26,7 @@
         }else{
             $ehPar = false;
         }
-        echo "O número $numero é ". ($ehPar ? 'par':'é impar');
+        echo "O número $numero é ". ($ehPar ? 'par':' impar');
     };
 
    };
