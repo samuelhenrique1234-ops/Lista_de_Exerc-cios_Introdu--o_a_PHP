@@ -1,4 +1,4 @@
-html lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,29 +11,23 @@ html lang="en">
     <form method="POST" action="">
         <label for="numero">Informe o número:</label>
         <input type="number" id="numero" name="numero" required>
-        <button type="submit" name="verificar_numero">Verificar</button>
+        <button type="submit" name="fatorial">Verificar</button>
     </form>
 
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-    if(isset($_POST['verificar_numero'])){
+    if(isset($_POST['fatorial'])){
         $numero = $_POST['numero'];
-        $ehPositivo = true;
-            if ($numero > 0) {
-                $ehPositivo = true;
-                echo "O número $numero é positivo";     
-            }
-            else if ($numero < 0) {
-                $ehPositivo = false;
-                echo "O número $numero é negativo";
-            }
-            else if ($numero == 0) {
-                $ehPositivo = false;
-                echo "O número $numero é zero";
+        $fatorial = 1;
+        $count = 1;
+
+        while($count <= $numero){
+            $fatorial*= $count;
+            $count++;
+        }
+        echo "O fatorial é $fatorial";
             }
         }
-    }   
     ?>
 
 </body>
